@@ -12,7 +12,7 @@
                return trim($_SERVER['REQUEST_URI'], '/') ;
             }
         }
-        
+
         public function run(){
             // Получить строку запроса
             $uri = $this->getUrl();
@@ -20,12 +20,17 @@
             foreach ($this->routes as $urlPattern => $path) {
                 // Если "ок" узнать какой контроллер и экшен обрабатывают запрос
                 if (preg_match("~$urlPattern~", $uri)){
+
+                    $internalRoute = preg_replace("~$urlPattern~",$path, $uri);
+
                     // Определяем какой контроллер и экшен обрабатывают запрос
-                    $segments = explode('/', $path);
+                    $segments = explode('/', $internalRoute);
                     //echo '<pre>'; print_r($segments); echo '</pre>';
                     $controllerName = array_shift($segments).'Controller';
                     $controllerName = ucfirst($controllerName);
                     $actionName = 'action'.ucfirst(array_shift($segments));
+
+                    $parameters = $segments;
 
                     // Родключить файл класса контроллера
                     $controllerFile = ROOT.'/controllers/'.$controllerName.'.php';
@@ -35,7 +40,8 @@
 
                     // Создать объект класса и вызвать метод (action)
                     $controllerObject = new $controllerName;
-                    $result = $controllerObject->$actionName();
+
+                    $result = call_user_func_array(array($controllerObject,$actionName), $parameters);
                     if ($result != null){
                         break;
                     }
