@@ -7,5 +7,7 @@
         require_once (ROOT.'/components/Router.php');
     // 3. Установка соединения с БД
     // 4. Вызов Router
+    $router = new Router();
+    $router->run();
 
 ?>
