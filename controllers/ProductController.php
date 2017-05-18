@@ -1,8 +1,13 @@
 <?php
     class ProductController{
-        public function actionList(){
-            echo 'Список товаров';
+
+        public function actionView($id){
+
+            require_once (ROOT.'/views/product/view.php');
+
             return true;
+
         }
+
     }
 ?>
