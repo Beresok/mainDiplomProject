@@ -8,7 +8,7 @@
 
             $newsList = array();
             $newsList = News::getNewsList();
-            echo '<pre>'; print_r($newsList); echo '<pre>';
+            include_once (ROOT.'/views/news/index.php');
 
             return true;
 
@@ -16,7 +16,7 @@
 
         public function actionView($id){
             $newsItem = News::getNewsById($id);
-            echo '<pre>'; print_r($newsItem); echo '</pre>';
+            include_once (ROOT.'/views/news/view.php');
 
             return true;
         }
