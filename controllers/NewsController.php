@@ -5,13 +5,19 @@
     class NewsController{
 
         public function actionIndex(){
-            echo 'Просмотр списка новостей';
+
+            $newsList = array();
+            $newsList = News::getNewsList();
+            echo '<pre>'; print_r($newsList); echo '<pre>';
+
             return true;
+
         }
 
-        public function actionView($category, $id){
-            echo "<br>Категория: $category";
-            echo "<br>id новости: $id";
+        public function actionView($id){
+            $newsItem = News::getNewsById($id);
+            echo '<pre>'; print_r($newsItem); echo '</pre>';
+
             return true;
         }
     }
