@@ -27,12 +27,12 @@
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                     <div class="productinfo text-center">
-                                        <!--                                        <img src="--><?//=$product['image']?><!--" alt="--><?//=$product['name']?><!--" />-->
+                                        <!-- <img src="--><?//=$product['image']?><!--" alt="--><?//=$product['name']?><!--" />-->
                                         <img src="/template/images/home/product1.jpg" alt="" />
                                         <h2><?=$product['price']?> руб.</h2>
                                         <p>
                                             <a href="/product/<?=$product['id']?>">
-                                                <?=$product['name']?>
+                                                id:<?=$product['id']?> <?=$product['name']?>
                                             </a>
                                         </p>
                                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
@@ -44,6 +44,8 @@
                             </div>
                         </div>
                     <? } ?>
+                    <!-- Постраничная навигация-->
+                    <? echo $pagination->get(); ?>
                 </div><!--features_items-->
             </div>
         </div>

@@ -47,7 +47,7 @@
                                         </span>
                                 <p><b>Наличие:</b> <? if (!empty($product['availabiity'])) { ?> На складе
                                     <? } else { ?> Под заказ <? } ?> </p>
-<!--                                <p><b>Состояние:</b> Новое</p>-->
+                                <!--<p><b>Состояние:</b> Новое</p>-->
                                 <p><b>Производитель:</b> <?=$product['brand']?></p>
                             </div><!--/product-information-->
                         </div>
