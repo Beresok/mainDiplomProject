@@ -44,5 +44,47 @@
             return true;
         }
 
+        public function actionlogin(){
+
+            $email = '';
+            $password = '';
+
+            if (isset($_POST['submit'])){
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+
+                $errors = false;
+
+                //Валидация полей
+                if (!User::checkEmail($email)){
+                    $errors[] = 'Неправильный email';
+                }
+
+                if (!User::checkPassword($password)){
+                    $errors[] = 'Пароль не должен быть короче 6-ти символов';
+                }
+
+                // Проверяем существует ли пользователь
+                $userId = User::checkUserData($email, $password);
+
+                if ($userId == false){
+                    $errors[] = 'неправильные данные для входа на сайт';
+                } else {
+                    User::auth($userId);
+                    header("Location: /cabinet/");
+                }
+
+            }
+
+            require_once(ROOT.'/views/user/login.php');
+
+            return true;
+        }
+
+        public static function actionLogout(){
+            unset($_SESSION['user']);
+            header("Location: / ");
+        }
+
     }
 ?>
