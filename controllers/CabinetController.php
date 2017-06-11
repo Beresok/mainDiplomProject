@@ -44,6 +44,8 @@
                     $result = User::edit($userId, $name, $password);
                 }
 
+                // echo '<pre>'; print_r($result); echo '</pre>'; die('!');
+
             }
 
             require_once (ROOT.'/views/cabinet/edit.php');
