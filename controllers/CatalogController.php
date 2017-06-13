@@ -1,4 +1,5 @@
 <?php
+
     class CatalogController {
 
         public function actionIndex(){
@@ -15,9 +16,6 @@
         }
 
         public function actionCategory($categoryId, $page = 1){
-
-            echo "<br>Category: $categoryId";
-            echo "<br>Page: $page";
 
             $categoryList = array();
             $categoryList = Category::getCategoryList();

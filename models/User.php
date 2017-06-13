@@ -14,6 +14,10 @@
 
         }
 
+        public static function checkPhone($phone){
+
+        }
+
         public static function checkName($name){
             if (strlen($name) >= 2){
                 return true;

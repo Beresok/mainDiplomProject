@@ -17,7 +17,7 @@
     <script src="/template/js/html5shiv.js"></script>
     <script src="/template/js/respond.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/template/images/ico/favicon.ico">
+    <!--    <link rel="shortcut icon" href="/template/images/ico/favicon.ico">-->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/template/images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/template/images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/template/images/ico/apple-touch-icon-72-precomposed.png">
@@ -60,7 +60,12 @@
                 <div class="col-sm-8">
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i> Корзина</a></li>
+                            <li>
+                                <a href="/cart/"><i class="fa fa-shopping-cart"></i>
+                                    Корзина
+                                    <span id="cart-count"><?php echo Cart::countItem();?></span>
+                                </a>
+                            </li>
                             <? if (User::isGuest()) { ?>
                                 <li><a href="/user/login/"><i class="fa fa-lock"></i> Вход</a></li>
                             <? } else { ?>
