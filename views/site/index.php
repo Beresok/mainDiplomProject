@@ -26,8 +26,7 @@
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                     <div class="productinfo text-center">
-<!--                                        <img src="--><?//=$product['image']?><!--" alt="--><?//=$product['name']?><!--" />-->
-                                        <img src="/template/images/home/product1.jpg" alt="" />
+                                        <img src="<? echo Product::getImage($product['id']);?>" alt="" />
                                         <h2><?=$product['price']?> руб.</h2>
                                         <p>
                                             <a href="/product/<?=$product['id']?>">

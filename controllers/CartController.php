@@ -17,6 +17,11 @@
             return true;
         }
 
+        public function actionDelete($id){
+            Cart::deleteProduct($id);
+            header('Location: /cart/');
+        }
+
         public function actionIndex(){
 
             $categories = array();
@@ -42,6 +47,8 @@
         }
 
         public function actionCheckout(){
+
+            // Получаем список категорий
             $categories = array();
             $categories = Category::getCategoryList();
 

@@ -17,11 +17,11 @@
     <script src="/template/js/html5shiv.js"></script>
     <script src="/template/js/respond.min.js"></script>
     <![endif]-->
-    <!--    <link rel="shortcut icon" href="/template/images/ico/favicon.ico">-->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/template/images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/template/images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/template/images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="/template/images/ico/apple-touch-icon-57-precomposed.png">
+<!--    <link rel="shortcut icon" href="/template/images/ico/favicon.ico">-->
+<!--    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/template/images/ico/apple-touch-icon-144-precomposed.png">-->
+<!--    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/template/images/ico/apple-touch-icon-114-precomposed.png">-->
+<!--    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/template/images/ico/apple-touch-icon-72-precomposed.png">-->
+<!--    <link rel="apple-touch-icon-precomposed" href="/template/images/ico/apple-touch-icon-57-precomposed.png">-->
 </head><!--/head-->
 
 <body>
@@ -40,8 +40,7 @@
                 <div class="col-sm-6">
                     <div class="social-icons pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/%D0%B5%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9-%D0%B1%D0%B5%D1%80%D0%B5%D1%81%D0%BD%D0%B5%D0%B2-653392114/"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>

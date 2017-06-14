@@ -15,7 +15,7 @@
         }
 
         public static function checkPhone($phone){
-
+            return true;
         }
 
         public static function checkName($name){
