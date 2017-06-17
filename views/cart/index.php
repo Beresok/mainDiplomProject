@@ -54,8 +54,8 @@
                                 </tr>
                             <?php endforeach; ?>
                                 <tr>
-                                    <td colspan="4">Общая стоимость, грн:</td>
-                                    <td><?php echo $totalPrice;?></td>
+                                    <td colspan="4">Общая стоимость:</td>
+                                    <td><?php echo $totalPrice;?> $</td>
                                 </tr>
                             
                         </table>
