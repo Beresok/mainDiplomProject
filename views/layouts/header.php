@@ -53,7 +53,8 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="/"><img src="/template/images/home/logo.png" alt="" /></a>
+                        <!-- <a href="/"><img src="/template/images/home/logo.png" alt="" /></a> -->
+                        <a href="/"><div class="logoFints">AppleShop</div></a>
                     </div>
                 </div>
                 <div class="col-sm-8">
